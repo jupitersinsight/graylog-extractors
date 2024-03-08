@@ -30,20 +30,6 @@
       "condition_value": ""
     },
     {
-      "title": "Fortinet Time",
-      "extractor_type": "regex",
-      "converters": [],
-      "order": 0,
-      "cursor_strategy": "copy",
-      "source_field": "message",
-      "target_field": "Time",
-      "extractor_config": {
-        "regex_value": "time=([0-9:]+)"
-      },
-      "condition_type": "none",
-      "condition_value": ""
-    },
-    {
       "title": "Fortinet Virtual Domain",
       "extractor_type": "regex",
       "converters": [],
@@ -1190,6 +1176,118 @@
       "target_field": "LogSubtype",
       "extractor_config": {
         "regex_value": "subtype=\\\"([a-z]+)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet TunnelType",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message_pulito",
+      "target_field": "TunnelType",
+      "extractor_config": {
+        "regex_value": "tunneltype=\\\"([a-z])\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet Time",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "Time",
+      "extractor_config": {
+        "regex_value": "time=([0-9\\s:]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet Remote IP",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message_pulito",
+      "target_field": "RemoteIP",
+      "extractor_config": {
+        "regex_value": "remip=([0-9.]+)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet ModifiedConfAttribute",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message_pulito",
+      "target_field": "ModifiedConfAttribute",
+      "extractor_config": {
+        "regex_value": "cfgattr=\\\"([a-zA-z0-9.\\-\\>\\[\\]]+)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet XauthUser",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "XAuthUser",
+      "extractor_config": {
+        "regex_value": "xauthuser=\\\"([a-zA-Z0-9]+)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet XAuthGroup",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "XAuthGroup",
+      "extractor_config": {
+        "regex_value": "xauthgroup=\\\"([a-zA-Z0-9/]+)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet VPNTunnelName",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "VPNTunnelName",
+      "extractor_config": {
+        "regex_value": "vpntunnel=\\\"([a-zA-Z0-9_]+)\""
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Fortinet VPNAssignedIPAddress",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "AssignedIPAddress",
+      "extractor_config": {
+        "regex_value": "assignip=([0-9\\.]+)"
       },
       "condition_type": "none",
       "condition_value": ""
